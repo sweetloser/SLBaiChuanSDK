@@ -25,23 +25,20 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'sweetloser' => '18272160172@163.com' }
-  s.source           = { :git => 'https://github.com/sweetloser/SLBaiChuanSDK.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  s.source           = { :git => 'git@github.com:sweetloser/SLBaiChuanSDK.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://sweetloser.com'
+  
   s.ios.deployment_target = '9.0'
   s.frameworks = 'JavaScriptCore', 'CoreTelephony', 'CoreMotion'
-    s.libraries = 'z', 'c++', 'resolv', 'sqlite3'
-  s.source_files = 'SLBaiChuanSDK/Classes/**/*'
-  s.resource              = 'SLBaiChuanSDK/bundle/*.bundle'
-  s.vendored_frameworks   = 'SLBaiChuanSDK/framework/AliAuthSDK/*.framework','SLBaiChuanSDK/framework/AlibcLinkPartnerSDK.framework','SLBaiChuanSDK/framework/AlibcTradeSDK/*.framework','SLBaiChuanSDK/framework/mtopSDK/*.framework','SLBaiChuanSDK/framework/securityGuard/*.framework','SLBaiChuanSDK/framework/UTMini.framework','SLBaiChuanSDK/framework/WindVane/*.framework'
-  s.requires_arc          = true
+  s.libraries = 'z', 'c++', 'resolv', 'sqlite3'
+  s.resource = 'SLBaiChuanSDK/bundle/*.bundle'
+  s.vendored_frameworks = 'SLBaiChuanSDK/framework/AliAuthSDK/*.framework','SLBaiChuanSDK/framework/AlibcLinkPartnerSDK.framework','SLBaiChuanSDK/framework/AlibcTradeSDK/*.framework','SLBaiChuanSDK/framework/mtopSDK/*.framework','SLBaiChuanSDK/framework/securityGuard/*.framework','SLBaiChuanSDK/framework/UTMini.framework','SLBaiChuanSDK/framework/WindVane/*.framework'
+  s.requires_arc = true
   s.dependency 'UTDID'
   
-  # s.resource_bundles = {
-  #   'SLBaiChuanSDK' => ['SLBaiChuanSDK/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.pod_target_xcconfig = {
+          'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+      }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
 end
