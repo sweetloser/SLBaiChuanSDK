@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'SLBaiChuanSDK_Example' do
+  pod 'SLBaiChuanSDK', :path => '../'
+
+  target 'SLBaiChuanSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

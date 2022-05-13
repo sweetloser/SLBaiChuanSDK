@@ -1,0 +1,23 @@
+PODS:
+  - SLBaiChuanSDK (0.0.1):
+    - UTDID
+  - UTDID (1.0.0)
+
+DEPENDENCIES:
+  - SLBaiChuanSDK (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - UTDID
+
+EXTERNAL SOURCES:
+  SLBaiChuanSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SLBaiChuanSDK: a1d701cffa62469b118e5e461479b0b2ea833ccd
+  UTDID: 05c4737c8cf5c210e86d0235570816ed00e023e8
+
+PODFILE CHECKSUM: c4ee57c6e295d75d475ac8ce67f1b8b1fd422a0a
+
+COCOAPODS: 1.11.2
