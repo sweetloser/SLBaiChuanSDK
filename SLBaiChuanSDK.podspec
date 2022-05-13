@@ -37,7 +37,8 @@ TODO: Add long description of the pod here.
   s.dependency 'UTDID'
   
   s.pod_target_xcconfig = {
-          'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+          'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+          'VALID_ARCHS' => 'arm64 armv7 armv7s'
       }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   
